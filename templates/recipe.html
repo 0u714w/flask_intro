@@ -1,7 +1,11 @@
 <!doctype html>
 
 <title>Random Recipe</title>
-{% if recipe %}
   <h1>This is a random recipe:</h1> 
-  <p>{{ recipe }}</p>
-{% endif %}
+  <p>{{ recipe.name }}</p>
+  <br>
+  <p>{{recipe.instructions}}</p>
+  <br>
+  <p>Ingredients: {{recipe.ingredients}}</p>
+  <br>
+  <a href="{{recipe.url}}">Link</a>
