@@ -15,5 +15,5 @@ def print_recipe(recipe=None):
 def random_recipe():
     all = db.all()
     random = all[randint(0,1)]
-    return random['name'] + '\n' + random['instructions'] + '\n' + random['url']
+    return random['name'] + '\n' + random['instructions'] + random['ingredients'] + '\n' + random['url']
 
