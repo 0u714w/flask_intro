@@ -2,7 +2,7 @@
 
 from flask import Flask, render_template
 from tinydb import TinyDB
-from random import randint
+import random
 
 
 app = Flask(__name__)
@@ -14,6 +14,6 @@ def print_recipe(recipe=None):
 
 def random_recipe():
     all = db.all()
-    random = all[randint(0,1)]
-    return random
+    r = random.choice(all)
+    return r
 
